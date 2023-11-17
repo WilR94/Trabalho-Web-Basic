@@ -1,0 +1,344 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+header,main{padding: 10px;}
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+    background: linear-gradient(-45deg, rgb(0, 140, 255), rgb(248, 212, 52));
+}
+
+
+ /*header*/
+ .containerHeader{
+
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(54, 114, 199);
+    align-items: center;
+}
+
+.containerBusca{
+    padding: 10px;
+}
+
+.busca{
+    padding: 15px 30px;
+    width: 100%;
+    border-radius: 24px;
+    border: 2px solid white;
+    text-align: center;
+    background: transparent;
+    font-size: medium;
+    
+}
+
+
+
+.botao:hover {
+    background: rgb(124, 124, 124);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.busca::placeholder{
+    color: white;
+    background: url("../Imagens/lupa.png") no-repeat;
+    background-position: 30px;
+    padding: 10px;
+}
+
+.busca:focus{
+    border: 1px solid rgba(255, 255, 255, 0.384);
+    outline: 0px;
+}
+
+.busca:focus::placeholder{
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.containerLinks{
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+}
+
+.containerLinksA{
+    text-decoration: none;
+    color: white;
+}
+
+.containerLinksA:hover{
+    color: #d8d8d8;
+}
+
+.linkImagem{
+    height: 95px;
+    margin-top: 0px;
+}
+a{
+    text-decoration: none;
+    text-decoration-color: red;
+}
+
+.titulo{
+    padding: 2%;
+}
+
+.item{
+    display: inline-block;
+    /*width: calc(33.33% - 43px);
+    min-width: 200px;*/
+    background-color: rgb(255, 255, 255);
+    color: #181818;
+    padding: 50px 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.itens a:hover{
+
+    background-image: none;
+    opacity: 0.9;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+@media (max-width: 600px) {
+
+    .item,a{
+        width: calc(50% - 43px);
+}
+}
+
+@media (max-width: 265px) {
+
+    .item,a{
+        width: calc(40% - 43px);
+}
+}
+
+@media (max-width: 192px) {
+
+    .item,a{
+        width: calc(40% - 43px);
+}
+}
+
+.itens{
+    
+    display: grid;
+    grid-area: produto;
+    grid-template-columns: repeat(auto-fill,minmax(400px,4fr));
+    gap: 5px;
+    
+}
+
+.preco_antigo{
+    color:rgb(99, 99, 99);
+}
+.preco{
+    color: rgb(0, 162, 255);
+}
+
+.itemConteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "imagem texto"
+    "descricao descricao"
+    "semelhante semelhante"
+    "produto produto"
+    ;
+}
+.imagem,.texto,.descricao,.semelhante,.produto{padding: 10px;}
+
+.imagem{
+    grid-area: imagem;
+    text-align: center;
+}
+
+.texto{
+    grid-area: texto;
+    background-color: rgb(255, 255, 255);
+}
+.textos{
+    color: white;
+    grid-area: texto;
+    background-color:rgb(54, 114, 199);
+}
+.descricao{
+    color: white;
+    grid-area: descricao;
+    background-color: rgb(54, 114, 199);
+    
+}
+.semelhante{
+    grid-area: semelhante;
+    font-size: larger;
+    padding-left: 20px;
+}
+
+.pagamentoconteiner{
+    max-width: min-content;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "marca marca"
+    "valor botao"
+    "valora botao"
+    "parcela parcelab"
+    ;
+}
+
+.valor{
+    grid-area: valor;
+    font-size: 50px;
+    color: orange;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+.valora{
+    grid-area: valora;
+    color: #9b9a9a;
+    padding-left: 20px;
+    padding-top: 0px;
+}
+.marca{
+    padding-bottom: 20px;
+    grid-area: marca;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    
+}
+.parcela{
+    grid-area: parcela;
+    color: white;
+    padding: 10px 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.parcelab{
+    grid-area: parcelab;
+    color: white;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+.botao{
+    grid-area: botao;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 0px;
+    padding-top: 2px;
+    cursor: pointer;
+    font-size: 70px;
+    background-color: orange;
+
+    
+}
+
+/* Rodapé */
+
+footer{
+    grid-area: footer;
+    width: 100%;
+}
+
+.rodape{
+    background-color: rgb(54, 114, 199);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+}
+.footerLink:hover{
+    opacity: 0.5;
+}
+
+.footerList{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.footerSubscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.footerSubscribe h2{
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.footerSubscribe p{
+    color: rgb(236, 236, 236);
+}
+
+.inputGroup{
+    display: flex;
+    align-items: center;
+    background-color: #fbebeb;
+    border-radius: 4px;
+}
+
+.inputGroup input{
+    all: unset;
+    padding: 10px;
+    width: 100%;
+}
+
+.inputGroup .email{
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 0px 16px;
+    font-size: 15px;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+
+.inputGroup button:hover{
+    opacity: 0.8;
+}
+
+.footerAutorais{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(35, 88, 162);
+    padding: 10px;
+    font-weight: 100;
+    color: white;
+}
+
+/* Rodapé */
