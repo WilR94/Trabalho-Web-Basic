@@ -13,27 +13,51 @@
             
             <h1>Cadastro de Usuário</h1>
             <p>Preencha o formulário de cadastro</p>
-            <form>
+
+            <form onsubmit="return conferesenha();">
+
                 <label for="nome"></label>
                 <input type="text" name="nome" id="nome" placeholder="Nome">
+
                 <label for="email"></label>
                 <input type="email" name="email" id="email" placeholder="E-mail">
+
                 <label for="senha"></label>
                 <input type="password" name="senha" id="senha" placeholder="Senha">
+
                 <label for="confSenha"></label>
                 <input type="password" name="confSenha" id="confSenha" placeholder="Confirmar Senha">
+
                 <label for="tel"></label>
                 <input type="text" name="tel" id="tel" placeholder="Telefone">
+
                 <label for="cep"></label>
                 <input type="text" name="cep" id="cep" placeholder="CEP">
+
                 <label for="endereço"></label>
                 <input type="text" name="endereço" id="endereço" placeholder="Logradouro">
+
                 <div class="botoes">
                     <button type="reset">Limpar</button>
-                    <button class="tirar" type="submit"><a href="../Pagina inicial/index.html">Cadastro</a></button>
+                    <button class="tirar" type="submit">Cadastro</a></button>
                 </div>
+
             </form>
         </section>
     </main>
 </body>
+<script>
+    function conferesenha() {
+   const senha = document.querySelector('input[name=senha]');
+   const confSenha = document.querySelector('input[name=confSenha]');
+
+   if (confSenha.value === senha.value) {
+      confSenha.setCustomValidity('');
+   } else {
+      confSenha.setCustomValidity('As senhas não conferem');
+   }
+
+   return confSenha.reportValidity();
+}
+</script>
 </html>
