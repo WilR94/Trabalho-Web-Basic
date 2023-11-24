@@ -2,9 +2,8 @@
 
 Willian Rodrigues
 
-            CADASTRO.html
-
+            CADASTRO
    -Alterações feitas API CEP automático.
    -Verificador de senha iguais.
-   -mudança de cor caráter botão.
+   -mudança de cor das letras dos 2 botões.
    -laço de repetição para validar alguns campos do formulário.
