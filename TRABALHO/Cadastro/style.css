@@ -51,7 +51,7 @@ input {
 button {
     font-family: Arial, sans-serif;
     background: linear-gradient(-45deg, rgb(0, 140, 255), rgb(248, 212, 52));
-    color: #d6d6d6;
+    /*color: #f7f3f3;*/
     border-radius: 20px;
     border: none;
     padding: 10px 20px;
